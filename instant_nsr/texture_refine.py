@@ -1,6 +1,6 @@
-from utils.func import load_obj,  save_obj,  make_sparse_camera, calc_vertex_normals, make_round_views, make_addition_views
-from utils.render import nvdiffRenderer
-from utils.video_utils import *
+from instant_nsr.utils.func import load_obj,  save_obj,  make_sparse_camera, calc_vertex_normals, make_round_views, make_addition_views
+from instant_nsr.utils.render import nvdiffRenderer
+from instant_nsr.utils.video_utils import *
 import  torch.optim as optim
 from tqdm import tqdm
 import cv2

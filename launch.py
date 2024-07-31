@@ -41,8 +41,8 @@ def main():
     from pytorch_lightning import Trainer
     from pytorch_lightning.callbacks import ModelCheckpoint, LearningRateMonitor
     from pytorch_lightning.loggers import TensorBoardLogger, CSVLogger
-    from utils.callbacks import CodeSnapshotCallback, ConfigSnapshotCallback, CustomProgressBar
-    from utils.misc import load_config    
+    from instant_nsr.utils.callbacks import CodeSnapshotCallback, ConfigSnapshotCallback, CustomProgressBar
+    from instant_nsr.utils.misc import load_config    
 
     # parse YAML config to OmegaConf
     config = load_config(args.config, cli_args=extras)
