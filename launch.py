@@ -35,8 +35,8 @@ def main():
     os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
     n_gpus = len(args.gpu.split(','))
 
-    import datasets
-    import systems
+    import instant_nsr.datasets as datasets
+    import instant_nsr.systems as systems
     import pytorch_lightning as pl
     from pytorch_lightning import Trainer
     from pytorch_lightning.callbacks import ModelCheckpoint, LearningRateMonitor

@@ -12,9 +12,9 @@ import torchvision.transforms.functional as TF
 
 import pytorch_lightning as pl
 
-import datasets
-from models.ray_utils import get_ortho_ray_directions_origins, get_ortho_rays, get_ray_directions
-from utils.misc import get_rank
+import instant_nsr.datasets as datasets
+from instant_nsr.models.ray_utils import get_ortho_ray_directions_origins, get_ortho_rays, get_ray_directions
+from instant_nsr.utils.misc import get_rank
 
 from glob import glob
 import PIL.Image

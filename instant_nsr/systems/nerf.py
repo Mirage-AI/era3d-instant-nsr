@@ -6,11 +6,10 @@ from torch_efficient_distloss import flatten_eff_distloss
 import pytorch_lightning as pl
 from pytorch_lightning.utilities.rank_zero import rank_zero_info, rank_zero_debug
 
-import models
-from models.ray_utils import get_rays
-import systems
-from systems.base import BaseSystem
-from systems.criterions import PSNR
+from instant_nsr.models.ray_utils import get_rays
+import instant_nsr.systems as systems
+from instant_nsr.systems.base import BaseSystem
+from instant_nsr.systems.criterions import PSNR
 
 
 @systems.register('nerf-system')

@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 
-from utils.misc import get_rank
+from instant_nsr.utils.misc import get_rank
 
 class BaseModel(nn.Module):
     def __init__(self, config):

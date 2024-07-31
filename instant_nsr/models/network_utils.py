@@ -7,9 +7,9 @@ import tinycudann as tcnn
 
 from pytorch_lightning.utilities.rank_zero import rank_zero_debug, rank_zero_info
 
-from utils.misc import config_to_primitive, get_rank
-from models.utils import get_activation
-from systems.utils import update_module_step
+from instant_nsr.utils.misc import config_to_primitive, get_rank
+from instant_nsr.models.utils import get_activation
+from instant_nsr.systems.utils import update_module_step
 
 class VanillaFrequency(nn.Module):
     def __init__(self, in_channels, config):

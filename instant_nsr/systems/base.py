@@ -1,9 +1,9 @@
 import pytorch_lightning as pl
 
-import models
-from systems.utils import parse_optimizer, parse_scheduler, update_module_step
-from utils.mixins import SaverMixin
-from utils.misc import config_to_primitive, get_rank
+import instant_nsr.models as models
+from instant_nsr.systems.utils import parse_optimizer, parse_scheduler, update_module_step
+from instant_nsr.utils.mixins import SaverMixin
+from instant_nsr.utils.misc import config_to_primitive, get_rank
 
 
 class BaseSystem(pl.LightningModule, SaverMixin):

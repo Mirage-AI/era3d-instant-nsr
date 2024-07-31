@@ -1,10 +1,10 @@
 import torch
 import torch.nn as nn
 
-import models
-from models.utils import get_activation
-from models.network_utils import get_encoding, get_mlp
-from systems.utils import update_module_step
+import instant_nsr.models as models
+from instant_nsr.models.utils import get_activation
+from instant_nsr.models.network_utils import get_encoding, get_mlp
+from instant_nsr.systems.utils import update_module_step
 
 
 @models.register('volume-radiance')

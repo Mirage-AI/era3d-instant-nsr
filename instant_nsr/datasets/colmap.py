@@ -10,11 +10,11 @@ import torchvision.transforms.functional as TF
 
 import pytorch_lightning as pl
 
-import datasets
-from datasets.colmap_utils import \
+import instant_nsr.datasets as datasets
+from instant_nsr.datasets.colmap_utils import \
     read_cameras_binary, read_images_binary, read_points3d_binary
-from models.ray_utils import get_ray_directions
-from utils.misc import get_rank
+from instant_nsr.models.ray_utils import get_ray_directions
+from instant_nsr.utils.misc import get_rank
 
 
 def get_center(pts):
@@ -236,7 +236,7 @@ class ColmapDatasetBase():
 
         """
         # for debug use
-        from models.ray_utils import get_rays
+        from instant_nsr.models.ray_utils import get_rays
         rays_o, rays_d = get_rays(self.directions.cpu(), self.all_c2w, keepdim=True)
         pts_out = []
         pts_out.append('\n'.join([' '.join([str(p) for p in l]) + ' 1.0 0.0 0.0' for l in rays_o[:,0,0].reshape(-1, 3).tolist()]))

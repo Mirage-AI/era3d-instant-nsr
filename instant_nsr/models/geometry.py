@@ -5,12 +5,12 @@ import torch.nn.functional as F
 
 from pytorch_lightning.utilities.rank_zero import rank_zero_info
 
-import models
-from models.base import BaseModel
-from models.utils import scale_anything, get_activation, cleanup, chunk_batch
-from models.network_utils import get_encoding, get_mlp, get_encoding_with_network
-from utils.misc import get_rank
-from systems.utils import update_module_step
+import instant_nsr.models as models
+from instant_nsr.models.base import BaseModel
+from instant_nsr.models.utils import scale_anything, get_activation, cleanup, chunk_batch
+from instant_nsr.models.network_utils import get_encoding, get_mlp, get_encoding_with_network
+from instant_nsr.utils.misc import get_rank
+from instant_nsr.systems.utils import update_module_step
 from nerfacc import ContractionType
 
 

@@ -6,12 +6,11 @@ from torch_efficient_distloss import flatten_eff_distloss
 import pytorch_lightning as pl
 from pytorch_lightning.utilities.rank_zero import rank_zero_info, rank_zero_debug
 
-import models
-from models.utils import cleanup
-from models.ray_utils import get_ortho_rays
-import systems
-from systems.base import BaseSystem
-from systems.criterions import PSNR, binary_cross_entropy
+from instant_nsr.models.utils import cleanup
+from instant_nsr.models.ray_utils import get_ortho_rays
+import instant_nsr.systems as systems
+from instant_nsr.systems.base import BaseSystem
+from instant_nsr.systems.criterions import PSNR, binary_cross_entropy
 
 import pdb
 
