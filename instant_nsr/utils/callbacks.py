@@ -1,7 +1,7 @@
 import os
 import subprocess
 import shutil
-from utils.misc import dump_config, parse_version
+from instant_nsr.utils.misc import dump_config, parse_version
 
 
 import pytorch_lightning
